@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zarai Mandi - Enterprise Commodity Trading Terminal v9</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root {
+  /* LIGHT MODE (DEFAULT) */
+  --bg:#f5f7fa; --bg2:#ffffff; --bg3:#ffffff; --bg4:#f0f3f7; --bg5:#e8ecef;
+  --border:#e0e6ed; --border2:#d0d7e0;
+  --text:#1a202c; --text2:#4a5568; --text3:#5a6a7e;
+  --green:#00b070; --green2:#00d085; --red:#e53e3e; --red2:#fc8181;
+  --amber:#d69e2e; --blue:#3182ce; --teal:#00b5d8; --purple:#805ad5; --accent:#00b070;
+}
+[data-theme="dark"] {
+  /* DARK MODE */
+  --bg:#0a0d12; --bg2:#0f1318; --bg3:#151b22; --bg4:#1c2430; --bg5:#222d3a;
+  --border:#1e2d3d; --border2:#2a3d52;
+  --text:#f8fafc; --text2:#b3c1d1; --text3:#8c9eb3;
+  --green:#00d085; --green2:#00ff9d; --red:#ff4757; --red2:#ff6b7a;
+  --amber:#f0a500; --blue:#2196f3; --teal:#00bcd4; --purple:#9c27b0; --accent:#00d085;
+}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);font-size:13px;overflow-x:hidden}
+.dashboard{display:grid;grid-template-rows:auto auto auto 1fr;min-height:100vh}
+
+/* TOP NAV ROW 1 */
+.topnav-row1{background:var(--bg2);padding:0 16px;display:flex;align-items:center;gap:12px;height:44px;border-bottom:2px solid var(--border2)}
+.logo{font-size:15px;font-weight:600;color:var(--green);letter-spacing:.5px;white-space:nowrap}
+.logo span{color:var(--text2);font-weight:300}
+.spacer{flex:1}
+.powered-by{display:flex;align-items:center;gap:8px}
+.powered-by a{color:var(--red);text-decoration:none;font-size:10px;font-weight:600;letter-spacing:.5px}
+.powered-by a:hover{text-decoration:underline}
+.powered-by img{height:24px}
+
+/* TOP NAV ROW 2 */
+.topnav-row2{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 16px;display:flex;align-items:center;gap:12px;height:36px}
+.live-badge{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--green);font-family:'JetBrains Mono',monospace;font-weight:500}
+.live-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(0,208,133,.4)}50%{opacity:.7;box-shadow:0 0 0 4px rgba(0,208,133,0)}}
+.nav-divider{width:1px;height:20px;background:var(--border);flex-shrink:0}
+.nav-btn{background:var(--bg4);border:1px solid var(--border);border-radius:5px;padding:4px 10px;font-size:12px;color:var(--text2);cursor:pointer;font-family:'Outfit',sans-serif;display:flex;align-items:center;gap:6px}
+.nav-btn:hover{border-color:var(--border2);color:var(--text)}
+.time-display{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text3)}
+
+/* FILTER BAR */
+.filterbar{background:var(--bg2);border-bottom:1px solid var(--border);padding:8px 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.filter-group{display:flex;align-items:center;gap:6px;position:relative}
+.filter-label{font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.8px;white-space:nowrap}
+.filter-select{background:var(--bg4);border:1px solid var(--border);border-radius:4px;padding:5px 8px;font-size:12px;color:var(--text);font-family:'Outfit',sans-serif;cursor:pointer;outline:none;min-width:120px}
+.filter-select:focus{border-color:var(--accent)}
+.filter-select option{background:var(--bg3);color:var(--text)}
+.filter-select optgroup{color:var(--text2);font-weight:600}
+.time-pills{display:flex;gap:3px}
+.time-pill{background:var(--bg4);border:1px solid var(--border);border-radius:4px;padding:4px 9px;font-size:11px;color:var(--text3);cursor:pointer;transition:all .15s}
+.time-pill.active{background:rgba(0,208,133,.12);border-color:var(--green);color:var(--green)}
+.time-pill:hover:not(.active){border-color:var(--border2);color:var(--text2)}
+.dropdown-btn{background:var(--bg4);border:1px solid var(--border);border-radius:4px;padding:5px 10px;font-size:12px;color:var(--text);cursor:pointer;font-family:'Outfit',sans-serif;min-width:140px;text-align:left}
+.dropdown-btn:hover{border-color:var(--border2)}
+.dropdown-content{display:none;position:absolute;top:100%;left:0;background:var(--bg3);min-width:200px;box-shadow:0 8px 24px rgba(0,0,0,.5);border:1px solid var(--border2);z-index:100;border-radius:4px;padding:4px 0;max-height:300px;overflow-y:auto}
+.dropdown-content.show{display:block}
+.dropdown-content label{display:block;padding:5px 10px;font-size:12px;cursor:pointer;color:var(--text2)}
+.dropdown-content label:hover{background:var(--bg4);color:var(--text)}
+.dropdown-content .group-hdr{padding:4px 10px;background:var(--bg5);font-weight:600;font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.6px}
+.dropdown-content label.disabled{color:var(--text3);cursor:not-allowed;opacity:.5}
+.dropdown-content::-webkit-scrollbar{width:4px}
+.dropdown-content::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
+.custom-dates{display:none;gap:6px;align-items:center}
+.custom-dates.show{display:flex}
+.custom-dates input{background:var(--bg4);border:1px solid var(--border);border-radius:4px;padding:4px 6px;font-size:11px;color:var(--text);font-family:'Outfit',sans-serif;outline:none}
+
+/* MAIN */
+.main{padding:12px 16px;display:grid;gap:12px}
+
+/* KPI */
+.kpi-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.kpi-card{background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:10px 12px;position:relative;overflow:hidden}
+.kpi-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--accent-color,var(--green))}
+.kpi-label{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.9px;margin-bottom:6px}
+.kpi-value{font-size:18px;font-weight:600;color:var(--text);font-family:'JetBrains Mono',monospace;line-height:1}
+.kpi-sub{font-size:10px;margin-top:4px;color:var(--text3);display:flex;align-items:center;gap:3px}
+.up{color:var(--green)}.down{color:var(--red)}.neutral{color:var(--text3)}
+
+/* CHART PANELS */
+.chart-row{display:grid;gap:12px}
+.chart-row.main-side{grid-template-columns:2fr 1fr}
+.chart-row.three{grid-template-columns:1.2fr 1fr 1fr}
+.chart-panel{background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:12px}
+.panel-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.panel-title{font-size:12px;font-weight:500;color:var(--text);letter-spacing:.3px}
+.panel-subtitle{font-size:10px;color:var(--text3);margin-top:1px}
+.panel-actions{display:flex;gap:5px;align-items:center}
+.panel-tag{font-size:10px;padding:2px 7px;border-radius:3px;background:var(--bg4);border:1px solid var(--border);color:var(--text3)}
+.panel-tag.live{border-color:rgba(0,208,133,.3);color:var(--green);background:rgba(0,208,133,.06)}
+.section-label{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--text3);margin-bottom:4px}
+
+/* GL */
+.gl-list{display:flex;flex-direction:column;gap:5px}
+.gl-item{display:flex;align-items:center;justify-content:space-between;padding:6px 8px;background:var(--bg4);border-radius:4px;border-left:2px solid transparent}
+.gl-item.gain{border-color:var(--green)}.gl-item.loss{border-color:var(--red)}
+.gl-station{font-size:11px;font-weight:500;color:var(--text)}
+.gl-province{font-size:10px;color:var(--text3)}
+.gl-price{font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--text)}
+.gl-chg{font-size:11px;font-weight:500;padding:2px 5px;border-radius:3px}
+.gl-chg.up{background:rgba(0,208,133,.1);color:var(--green)}
+.gl-chg.dn{background:rgba(255,71,87,.1);color:var(--red)}
+
+/* HEATMAP */
+.heatmap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(85px,1fr));gap:4px}
+.hm-cell{aspect-ratio:2/1;border-radius:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:10px;font-weight:500;color:rgba(255,255,255,.9);cursor:default;transition:transform .15s;text-shadow:0 1px 3px rgba(0,0,0,.7);min-height:40px;padding:2px}
+.hm-cell:hover{transform:scale(1.08);z-index:1}
+.hm-cell .hm-price{font-size:9px;font-family:'JetBrains Mono',monospace;margin-top:2px;opacity:.85}
+
+/* ALERTS */
+.alerts-section{background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:10px 14px}
+.alerts-header{display:flex;align-items:center;gap:6px;margin-bottom:6px;font-size:11px;font-weight:500;color:var(--amber);text-transform:uppercase;letter-spacing:.8px}
+.alert-line{font-size:12px;color:var(--text3);padding:4px 0}
+
+/* TABLE */
+.table-scroll{overflow-x:auto;max-height:340px;overflow-y:auto}
+.table-scroll::-webkit-scrollbar{width:3px;height:3px}
+.table-scroll::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
+.mkt-table{width:100%;border-collapse:collapse}
+.mkt-table th{font-size:10px;text-transform:uppercase;letter-spacing:.8px;color:var(--text3);padding:6px 8px;border-bottom:1px solid var(--border);text-align:left;font-weight:400;cursor:pointer}
+.mkt-table th:hover{color:var(--text2)}
+.mkt-table td{padding:6px 8px;border-bottom:1px solid rgba(30,45,61,.5);font-size:11px;color:var(--text2)}
+.mkt-table tr:hover td{background:rgba(255,255,255,.02)}
+.mkt-table .station{color:var(--text);font-weight:500}
+.mkt-table .province-tag{font-size:9px;padding:1px 5px;border-radius:2px;background:var(--bg4);color:var(--text3)}
+.mkt-table .price-cell{font-family:'JetBrains Mono',monospace;color:var(--text);font-size:12px}
+.chg-cell{font-family:'JetBrains Mono',monospace;font-size:11px}
+.vol-bar{display:inline-block;height:3px;border-radius:1px;background:var(--blue);vertical-align:middle;margin-right:4px;opacity:.7}
+.table-period{display:flex;gap:3px;margin-left:auto}
+
+/* STATUS */
+.status-row{display:flex;align-items:center;gap:12px;padding:6px 16px;border-top:1px solid var(--border);font-size:10px;color:var(--text3)}
+.status-item{display:flex;align-items:center;gap:4px}
+.status-dot{width:5px;height:5px;border-radius:50%}
+
+/* ERROR */
+.error-banner{background:rgba(255,71,87,.1);border:1px solid var(--red);border-radius:6px;padding:16px;text-align:center;color:var(--red);font-size:13px;margin:20px 16px}
+
+/* RESPONSIVE */
+@media(max-width:1200px){
+  .kpi-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:900px){
+  .chart-row.main-side,.chart-row.three{grid-template-columns:1fr}
+  .kpi-grid{grid-template-columns:repeat(2,1fr)}
+  .filterbar{flex-direction:column;align-items:stretch}
+  .filter-group{flex-direction:column;align-items:stretch}
+  .nav-divider{display:none}
+  .dropdown-btn, .filter-select{width:100%}
+}
+@media(max-width:600px){
+  .kpi-grid{grid-template-columns:1fr}
+  .topnav-row1, .topnav-row2{flex-wrap:wrap;height:auto;padding:8px 16px;justify-content:space-between}
+  .time-display{margin-left:auto}
+}
+</style>
+</head>
+<body>
+<div class="dashboard">
+
+<!-- ROW 1: HEADER -->
+<div class="topnav-row1">
+  <div class="logo">ZARAI <span>MANDI</span> <span style="color:var(--text3);font-size:10px;margin-left:4px">BI</span></div>
+  <div class="spacer"></div>
+  <div class="powered-by">
+    <a href="https://economicsystemsglobal.com/" target="_blank">POWERED BY ECONOMIC SYSTEMS</a>
+    <img src="esc-logo.png" alt="ESC Logo">
+  </div>
+</div>
+
+<!-- ROW 2: LIVE + BUTTONS -->
+<div class="topnav-row2">
+  <div class="live-badge"><div class="live-dot"></div>LIVE FEED</div>
+  <div class="nav-divider"></div>
+  <div class="time-display" id="clockDisplay">--:--:--</div>
+  <div class="spacer"></div>
+  <button class="nav-btn" onclick="exportData()" id="exportBtn">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Export
+  </button>
+  <button class="nav-btn" onclick="toggleTheme()" id="themeBtn" title="Toggle Light/Dark Mode">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+  </button>
+</div>
+
+<!-- FILTER BAR -->
+<div class="filterbar">
+  <div class="filter-group">
+    <span class="filter-label">Period</span>
+    <div class="time-pills" id="mainPeriodPills">
+      <button class="time-pill active" data-period="1D">1D</button>
+      <button class="time-pill" data-period="7D">7D</button>
+      <button class="time-pill" data-period="30D">30D</button>
+      <button class="time-pill" data-period="custom">Custom</button>
+    </div>
+    <div class="custom-dates" id="customDates">
+      <input type="date" id="dateFrom"> <span style="color:var(--text3);font-size:10px">to</span> <input type="date" id="dateTo">
+    </div>
+  </div>
+  <div class="nav-divider"></div>
+  <div class="filter-group">
+    <span class="filter-label">Commodity</span>
+    <select class="filter-select" id="commodityFilter"></select>
+  </div>
+  <div class="nav-divider"></div>
+  <div class="filter-group">
+    <span class="filter-label">Province</span>
+    <button class="dropdown-btn" id="provBtn" onclick="toggleDrop('provDrop')">All Provinces ▼</button>
+    <div class="dropdown-content" id="provDrop"></div>
+  </div>
+  <div class="filter-group">
+    <span class="filter-label">Station</span>
+    <button class="dropdown-btn" id="stationBtn" onclick="toggleDrop('stationDrop')">All Stations ▼</button>
+    <div class="dropdown-content" id="stationDrop"></div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+
+<!-- KPI CARDS -->
+<div class="kpi-grid">
+  <div class="kpi-card" style="--accent-color:#00d085">
+    <div class="kpi-label">Natl Avg Price</div>
+    <div class="kpi-value" id="kpiNatAvg">—</div>
+    <div class="kpi-sub" id="kpiNatAvgSub">per 40kg maund</div>
+  </div>
+  <div class="kpi-card" style="--accent-color:#2196f3">
+    <div class="kpi-label">Daily Volume</div>
+    <div class="kpi-value" id="kpiVolume">—</div>
+    <div class="kpi-sub">national supply (maunds)</div>
+  </div>
+  <div class="kpi-card" style="--accent-color:#00d085">
+    <div class="kpi-label">National Low / High (Latest)</div>
+    <div class="kpi-value" id="kpiNatHL" style="font-size:15px">—</div>
+    <div class="kpi-sub" id="kpiNatHLSub"></div>
+  </div>
+  <div class="kpi-card" style="--accent-color:#f0a500">
+    <div class="kpi-label">Period Low / High</div>
+    <div class="kpi-value" id="kpiPeriodHL" style="font-size:15px">—</div>
+    <div class="kpi-sub" id="kpiPeriodHLSub"></div>
+  </div>
+  <div class="kpi-card" style="--accent-color:#9c27b0">
+    <div class="kpi-label">Station Low / High</div>
+    <div class="kpi-value" id="kpiStationHL" style="font-size:15px">—</div>
+    <div class="kpi-sub" id="kpiStationHLSub">Select a station</div>
+  </div>
+  <div class="kpi-card" style="--accent-color:#f0a500">
+    <div class="kpi-label">Most Active Station</div>
+    <div class="kpi-value" id="kpiActive" style="font-size:14px">—</div>
+    <div class="kpi-sub" id="kpiActiveSub"></div>
+  </div>
+</div>
+
+<!-- ROW: PRICE CHART + VOLUME -->
+<div class="chart-row main-side">
+  <div class="chart-panel">
+    <div class="panel-header">
+      <div>
+        <div class="panel-title" id="chartTitle">Price Trend — (40kg)</div>
+        <div class="panel-subtitle">Multi-region overlay · Interactive</div>
+      </div>
+      <div class="panel-actions"><span class="panel-tag live">● Live</span></div>
+    </div>
+    <div id="priceChart" style="width:100%;height:300px"></div>
+  </div>
+  <div class="chart-panel">
+    <div class="panel-header">
+      <div>
+        <div class="panel-title">Daily Volume</div>
+        <div class="panel-subtitle">Arrival quantity · Standardized 40kg maunds</div>
+      </div>
+    </div>
+    <div id="volumeChart" style="width:100%;height:300px"></div>
+  </div>
+</div>
+
+<!-- ROW: PROVINCE + GAINERS + LOSERS -->
+<div class="chart-row three">
+  <div class="chart-panel">
+    <div class="panel-header">
+      <div>
+        <div class="panel-title">Province Price Comparison</div>
+        <div class="panel-subtitle">Avg closing price per province · ₨ per 40kg</div>
+      </div>
+    </div>
+    <div id="provinceChart" style="width:100%;height:200px"></div>
+  </div>
+  <div class="chart-panel">
+    <div class="panel-header"><div><div class="panel-title">Top Gainers</div><div class="panel-subtitle">Highest price increase</div></div></div>
+    <div class="gl-list" id="gainersList"></div>
+  </div>
+  <div class="chart-panel">
+    <div class="panel-header"><div><div class="panel-title">Top Losers</div><div class="panel-subtitle">Highest price decrease</div></div></div>
+    <div class="gl-list" id="losersList"></div>
+  </div>
+</div>
+
+<!-- HEATMAP (FULL WIDTH) -->
+<div class="chart-panel">
+  <div class="panel-header">
+    <div>
+      <div class="panel-title">Price Distribution Heatmap</div>
+      <div class="panel-subtitle">Station-level intensity · based on current closing price</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:4px;font-size:10px;color:var(--text3)">
+      <span style="display:inline-block;width:50px;height:8px;background:linear-gradient(90deg,#2196f3,#ff4757);border-radius:2px"></span>
+      <span id="hmLegend">Low — High</span>
+    </div>
+  </div>
+  <div class="heatmap-grid" id="heatmapGrid"></div>
+</div>
+
+<!-- ALERTS -->
+<div class="alerts-section">
+  <div class="alerts-header">🔔 Alerts & News</div>
+  <div class="alert-line" id="alertContent">No active alerts</div>
+</div>
+
+<!-- LIVE TABLE -->
+<div class="chart-panel">
+  <div class="panel-header">
+    <div>
+      <div class="panel-title" id="tableTitle">Live Market Table</div>
+      <div class="panel-subtitle">Station-wise data for selected commodity</div>
+    </div>
+    <div class="panel-actions">
+      <span class="panel-tag live">● Live</span>
+      <div class="table-period" id="tablePeriodPills">
+        <button class="time-pill active" data-tperiod="1D">1D</button>
+        <button class="time-pill" data-tperiod="7D">7D</button>
+        <button class="time-pill" data-tperiod="30D">30D</button>
+      </div>
+      <input type="text" id="tableSearch" placeholder="Search station..." style="background:var(--bg4);border:1px solid var(--border);border-radius:4px;padding:3px 8px;font-size:10px;color:var(--text);font-family:'Outfit',sans-serif;outline:none;width:120px">
+    </div>
+  </div>
+  <div class="table-scroll">
+    <table class="mkt-table" id="marketTable">
+      <thead><tr>
+        <th>Station</th><th>Province</th><th>Opening</th><th>Closing</th><th>Change %</th><th>Volume (Maunds)</th><th>High</th><th>Low</th>
+      </tr></thead>
+      <tbody id="marketTableBody"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- STATUS BAR -->
+<div class="status-row">
+  <div class="status-item"><div class="status-dot" style="background:var(--green)"></div>Market Open</div>
+  <div class="status-item"><div class="status-dot" style="background:var(--blue)"></div><span id="statStations">0</span> Active Stations</div>
+  <div class="status-item"><div class="status-dot" style="background:var(--amber)"></div><span id="statProvinces">0</span> Provinces</div>
+  <div style="flex:1"></div>
+  <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text3)">v9.0.0 · Zarai Mandi BI Platform</span>
+</div>
+
+</div><!-- end main -->
+</div><!-- end dashboard -->
+
+<script src="v9-data.js"></script>
+<script src="v9-ui.js"></script>
+</body>
+</html>

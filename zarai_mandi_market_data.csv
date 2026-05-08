@@ -1,0 +1,285 @@
+Region,Station,Package,Product,Opening,Closing,Arrival Quantity (Bags),Arrival Unit (KG),Entry-Date
+Sindh,Badin,Wheat,Wheat,3700,3750,0,0,06/03/2025
+Sindh,Dadu,Wheat,Wheat,3700,3850,0,0,06/03/2025
+Sindh,Daharki,Wheat,Wheat,3820,3850,0,0,06/03/2025
+Sindh,Gharo,Wheat,Wheat,3600,3750,0,0,06/03/2025
+Sindh,Golarchi Taluka,Wheat,Wheat,3700,3765,0,0,06/03/2025
+Sindh,Hyderabad,Wheat,Wheat,3700,3800,0,0,06/03/2025
+Sindh,Khairpur,Wheat,Wheat,3600,3825,0,0,06/03/2025
+Sindh,Khipro,Wheat,Wheat,3600,3800,0,0,06/03/2025
+Sindh,Larkana,Wheat,Wheat,3600,3900,0,0,06/03/2025
+Sindh,Mirpur Khas,Wheat,Wheat,3750,3800,0,0,06/03/2025
+Sindh,Mirpur Sakro,Wheat,Wheat,3650,3765,0,0,06/03/2025
+Sindh,Shahdadkot,Wheat,Wheat,3600,3950,0,0,06/03/2025
+Sindh,Thatta,Wheat,Wheat,3700,3750,0,0,06/03/2025
+Sindh,Salehput,Wheat,Wheat,3925,3950,0,0,06/03/2025
+Sindh,Sakrand,Wheat,Wheat,3800,3880,0,0,06/03/2025
+Sindh,Pano Aqil,Wheat,Wheat,3970,4000,0,0,06/03/2025
+Sindh,Karachi,Wheat,Wheat,3650,4200,0,0,06/03/2025
+Sindh,Kandiaro,Wheat,Wheat,3780,3840,0,0,06/03/2025
+Sindh,Sakrand,Wheat,Wheat,3780,3840,0,0,06/03/2025
+Sindh,Shaheed Benazirabad (Nawabshah),Wheat,Wheat,3800,3880,0,0,06/03/2025
+Sindh,Naushahro Feroze,Wheat,Wheat,3700,3800,0,0,06/03/2025
+Sindh,Moro,Wheat,Wheat,3250,3350,0,0,06/03/2025
+Sindh,Hyderabad,Wheat,Wheat,3800,3900,0,0,06/03/2025
+Sindh,Sinjhoro,Wheat,Wheat,3600,3810,0,0,06/03/2025
+Sindh,Sanghar,Wheat,Wheat,3550,3800,0,0,06/03/2025
+Sindh,Ghotki,Wheat,Wheat,4000,4050,0,0,06/03/2025
+Punjab,Attock,Wheat,Wheat,3600,3680,0,0,06/03/2025
+Punjab,Kabirwala,Wheat,Wheat,3500,3570,0,0,06/03/2025
+Punjab,Muzaffargarh,Wheat,Wheat,3445,3540,0,0,06/03/2025
+Punjab,Pindi Gheb,Wheat,Wheat,3580,3675,0,0,06/03/2025
+Punjab,Rawalpindi,Wheat,Wheat,3650,3715,0,0,06/03/2025
+Punjab,Mangowal,Wheat,Wheat,3525,3600,0,0,06/03/2025
+Punjab,Islamabad,Wheat,Wheat,3700,3775,0,0,06/03/2025
+Punjab,Khushab,Wheat,Wheat,3525,3610,0,0,06/03/2025
+Punjab,Layyah,Wheat,Wheat,3470,3575,0,0,06/03/2025
+Punjab,Mandi Bahauddin,Wheat,Wheat,3480,3550,0,0,06/03/2025
+Punjab,Mianwali,Wheat,Wheat,3465,3525,0,0,06/03/2025
+Punjab,Sargodha,Wheat,Wheat,3500,3560,0,0,06/03/2025
+Punjab,Taunsa sharif,Wheat,Wheat,3475,3530,0,0,06/03/2025
+Punjab,Lahore,Wheat,Wheat,3600,3675,0,0,06/03/2025
+Punjab,Ahmadpur East,Wheat,Wheat,3480,3560,0,0,06/03/2025
+Punjab,Bahawalnagar,Wheat,Wheat,3760,3900,0,0,06/03/2025
+Punjab,Chowk Azam,Wheat,Wheat,3450,3550,0,0,06/03/2025
+Punjab,Haroonabad,Wheat,Wheat,3790,3875,0,0,06/03/2025
+Punjab,Hasilpur,Wheat,Wheat,3850,3935,0,0,06/03/2025
+Punjab,Minchinabad,Wheat,Wheat,3700,3960,0,0,06/03/2025
+Punjab,Multan,Wheat,Wheat,3850,4000,0,0,06/03/2025
+Punjab,Muzaffargarh,Wheat,Wheat,3740,3960,0,0,06/03/2025
+Punjab,Nankana Sahib,Wheat,Wheat,3500,3550,0,0,06/03/2025
+Punjab,Faizabad,Wheat,Wheat,3500,3600,0,0,06/03/2025
+Punjab,Bucheki,Wheat,Wheat,3450,3500,0,0,06/03/2025
+Punjab,Pattoki,Wheat,Wheat,3440,3480,0,0,06/03/2025
+Punjab,Khushab,Wheat,Wheat,3500,3600,0,0,06/03/2025
+Punjab,Multan,Wheat,Wheat,3600,3700,0,0,06/03/2025
+Punjab,Dipalpur,Wheat,Wheat,3180,3560,0,0,06/03/2025
+Punjab,Mianwali,Wheat,Wheat,3500,3750,0,0,06/03/2025
+Punjab,Allahabad,Wheat,Wheat,3400,3700,0,0,06/03/2025
+Punjab,Quaidabad,Wheat,Wheat,3500,3525,0,0,06/03/2025
+Punjab,Bhakkar,Wheat,Wheat,3500,3780,0,0,06/03/2025
+Punjab,Gojra,Wheat,Wheat,3500,3520,0,0,06/03/2025
+Punjab,Sargodha,Wheat,Wheat,3500,3520,0,0,06/03/2025
+Punjab,Vehari,Wheat,Wheat,3400,3450,0,0,06/03/2025
+Punjab,Hasilpur,Wheat,Wheat,3400,3500,0,0,06/03/2025
+Punjab,Burewala,Wheat,Wheat,3400,3500,0,0,06/03/2025
+Punjab,Jaranwala,Wheat,Wheat,3500,3600,0,0,06/03/2025
+Punjab,Dunga Bunga,Wheat,Wheat,3425,3470,0,0,06/03/2025
+Punjab,Chichawatni,Wheat,Wheat,3400,3500,0,0,06/03/2025
+Punjab,Faisalabad,Wheat,Wheat,3500,3600,0,0,06/03/2025
+Punjab,Mian Channu,Wheat,Wheat,3450,3570,0,0,06/03/2025
+Punjab,Shorkot,Wheat,Wheat,3350,3500,0,0,06/03/2025
+Punjab,Chishtian,Wheat,Wheat,3300,3500,0,0,06/03/2025
+Punjab,Chowk Munda,Wheat,Wheat,3450,3500,0,0,06/03/2025
+Punjab,Khanewal,Wheat,Wheat,3460,3520,0,0,06/03/2025
+Punjab,Pasrur,Wheat,Wheat,3400,3500,0,0,06/03/2025
+Punjab,Bahawalpur,Wheat,Wheat,3600,3700,0,0,06/03/2025
+Punjab,Faqirwali,Wheat,Wheat,3400,3600,0,0,06/03/2025
+Punjab,Kamoki,Wheat,Wheat,3550,3600,0,0,06/03/2025
+Punjab,Sheikhupura,Wheat,Wheat,3500,3550,0,0,06/03/2025
+Punjab,Sahiwal,Wheat,Wheat,3500,3680,0,0,06/03/2025
+Punjab,Muridke,Wheat,Wheat,3400,3500,0,0,06/03/2025
+Punjab,Sialkot,Wheat,Wheat,3400,3500,0,0,06/03/2025
+Punjab,Arifwala,Wheat,Wheat,3300,3500,0,0,06/03/2025
+Punjab,Rahim Yar Khan,Wheat,Wheat,3500,3900,0,0,06/03/2025
+Punjab,Fortabbas,Wheat,Wheat,3400,3500,0,0,06/03/2025
+Punjab,Haroonabad,Wheat,Wheat,3400,3500,0,0,06/03/2025
+Punjab,Pakpattan,Wheat,Wheat,3470,3550,0,0,06/03/2025
+Punjab,Shujabad,Wheat,Wheat,3500,3600,0,0,06/03/2025
+Punjab,Sadiqabad,Wheat,Wheat,3600,3850,0,0,06/03/2025
+Punjab,Lodhran,Wheat,Wheat,3500,3650,0,0,06/03/2025
+Punjab,Hafizabad,Wheat,Wheat,3500,3600,0,0,06/03/2025
+Punjab,Gujranwala,Wheat,Wheat,3450,3500,0,0,06/03/2025
+Punjab,Dera Ghazi Khan,Wheat,Wheat,4000,4200,0,0,06/03/2025
+Punjab,Gojra,Wheat,Wheat,3600,3700,0,0,06/03/2025
+Punjab,Sargodha,Wheat,Wheat,3600,3700,0,0,06/03/2025
+Punjab,Sialkot,Wheat,Wheat,4000,4200,0,0,06/03/2025
+Punjab,Muridke,Wheat,Wheat,4000,4200,0,0,06/03/2025
+Punjab,Pasrur,Wheat,Wheat,3900,4000,0,0,06/03/2025
+Balochistan,Dera Bughti,Wheat,Wheat,3600,3650,0,0,06/03/2025
+Balochistan,Jaffarabad,Wheat,Wheat,3600,3600,0,0,06/03/2025
+Balochistan,Musakhel,Wheat,Wheat,3525,3600,0,0,06/03/2025
+Balochistan,Sibi,Wheat,Wheat,3650,3800,0,0,06/03/2025
+Balochistan,Uthal,Wheat,Wheat,3600,3850,0,0,06/03/2025
+KPK,Landi Kotal,Wheat,Wheat,4700,4750,0,0,06/03/2025
+KPK,Landi Kotal,Wheat,Wheat,4700,4850,0,0,06/03/2025
+KPK,Peshawar,Wheat,Wheat,4780,4900,0,0,06/03/2025
+KPK,Dera Ismail Khan,Wheat,Wheat,4200,4450,0,0,06/03/2025
+Sindh,Karachi,Wheat,Flour,4480,4560,0,0,06/03/2025
+Sindh,Shaheed Benazirabad (Nawabshah),Wheat,Flour,4300,4400,0,0,06/03/2025
+Sindh,Pano Aqil,Wheat,Flour,4150,4200,0,0,06/03/2025
+Sindh,Naushahro Feroze,Wheat,Flour,4100,4200,0,0,06/03/2025
+Sindh,Mirpur Khas,Wheat,Flour,4100,4200,0,0,06/03/2025
+Sindh,Hyderabad,Wheat,Flour,4000,4150,0,0,06/03/2025
+Sindh,Moro,Wheat,Flour,4000,4100,0,0,06/03/2025
+Sindh,Sukkur,Wheat,Flour,4000,4100,0,0,06/03/2025
+Sindh,Khairpur,Wheat,Flour,4000,4100,0,0,06/03/2025
+Sindh,Dadu,Wheat,Flour,4000,4050,0,0,06/03/2025
+Punjab,Taxila,Wheat,Flour,4450,4500,0,0,06/03/2025
+Punjab,Islamabad,Wheat,Flour,4420,4450,0,0,06/03/2025
+Punjab,Mandi Bahauddin,Wheat,Flour,4300,4400,0,0,06/03/2025
+Punjab,Lahore,Wheat,Flour,4300,4400,0,0,06/03/2025
+Punjab,Rahim Yar Khan,Wheat,Flour,4225,4280,0,0,06/03/2025
+Punjab,Sheikhupura,Wheat,Flour,4200,4300,0,0,06/03/2025
+Punjab,Faisalabad,Wheat,Flour,4200,4300,0,0,06/03/2025
+Punjab,Jaranwala,Wheat,Flour,4200,4275,0,0,06/03/2025
+Punjab,Gujranwala,Wheat,Flour,4170,4275,0,0,06/03/2025
+KPK,Dera Ismail Khan,Wheat,Flour,5000,5400,0,0,06/03/2025
+KPK,Havelian,Wheat,Flour,4300,4400,0,0,06/03/2025
+Sindh,Sukkur,Wheat,Straw,750,800,0,0,06/03/2025
+Sindh,Hyderabad,Wheat,Straw,650,700,0,0,06/03/2025
+Sindh,Naushahro Feroze,Wheat,Straw,600,650,0,0,06/03/2025
+Punjab,Layyah,Wheat,Straw,750,800,0,0,06/03/2025
+Punjab,Bahawalpur,Wheat,Straw,600,650,0,0,06/03/2025
+Punjab,Faqirwali,Wheat,Straw,500,700,0,0,06/03/2025
+Sindh,Shaheed Benazirabad (Nawabshah),Wheat,White Flour,5100,5200,0,0,06/03/2025
+Sindh,Pano Aqil,Wheat,White Flour,4450,4500,0,0,06/03/2025
+Punjab,Faisalabad,Wheat,White Flour,5150,5190,0,0,06/03/2025
+Punjab,Rahim Yar Khan,Wheat,White Flour,5120,5185,0,0,06/03/2025
+Punjab,Gujranwala,Wheat,White Flour,5100,5200,0,0,06/03/2025
+Punjab,Lahore,Wheat,White Flour,5100,5200,0,0,06/03/2025
+Punjab,Mandi Bahauddin,Wheat,White Flour,5100,5180,0,0,06/03/2025
+Punjab,Multan,Wheat,White Flour,5075,5140,0,0,06/03/2025
+Punjab,Sheikhupura,Wheat,White Flour,5000,5100,0,0,06/03/2025
+Sindh,Badin,Wheat,Wheat,0,0,0,0,06/03/2025
+Sindh,Dadu,Wheat,Wheat,0,0,0,0,06/03/2025
+Sindh,Daharki,Wheat,Wheat,0,0,0,0,06/03/2025
+Sindh,Gharo,Wheat,Wheat,0,0,0,0,06/03/2025
+Sindh,Golarchi Taluka,Wheat,Wheat,0,0,0,0,06/03/2025
+Sindh,Hyderabad,Wheat,Wheat,0,0,0,0,06/03/2025
+Sindh,Khairpur,Wheat,Wheat,0,0,0,0,06/03/2025
+Sindh,Khipro,Wheat,Wheat,0,0,0,0,06/03/2025
+Sindh,Larkana,Wheat,Wheat,0,0,0,0,06/03/2025
+Sindh,Mirpur Khas,Wheat,Wheat,0,0,0,0,06/03/2025
+Sindh,Mirpur Sakro,Wheat,Wheat,0,0,0,0,06/03/2025
+Sindh,Shahdadkot,Wheat,Wheat,0,0,0,0,06/03/2025
+Sindh,Thatta,Wheat,Wheat,0,0,0,0,06/03/2025
+Sindh,Salehput,Wheat,Wheat,0,0,0,0,06/03/2025
+Sindh,Sakrand,Wheat,Wheat,0,0,0,100,06/03/2025
+Sindh,Pano Aqil,Wheat,Wheat,0,0,0,40,06/03/2025
+Sindh,Karachi,Wheat,Wheat,0,0,6,40,06/03/2025
+Sindh,Kandiaro,Wheat,Wheat,0,0,40,100,06/03/2025
+Sindh,Sakrand,Wheat,Wheat,0,0,40,100,06/03/2025
+Sindh,Shaheed Benazirabad (Nawabshah),Wheat,Wheat,0,0,50,100,06/03/2025
+Sindh,Naushahro Feroze,Wheat,Wheat,0,0,66,50,06/03/2025
+Sindh,Moro,Wheat,Wheat,0,0,90,100,06/03/2025
+Sindh,Hyderabad,Wheat,Wheat,0,0,90,40,06/03/2025
+Sindh,Sinjhoro,Wheat,Wheat,0,0,170,40,06/03/2025
+Sindh,Sanghar,Wheat,Wheat,0,0,500,40,06/03/2025
+Sindh,Ghotki,Wheat,Wheat,0,0,800,40,06/03/2025
+Punjab,Attock,Wheat,Wheat,0,0,0,0,06/03/2025
+Punjab,Kabirwala,Wheat,Wheat,0,0,0,0,06/03/2025
+Punjab,Muzaffargarh,Wheat,Wheat,0,0,0,0,06/03/2025
+Punjab,Pindi Gheb,Wheat,Wheat,0,0,0,0,06/03/2025
+Punjab,Rawalpindi,Wheat,Wheat,0,0,0,0,06/03/2025
+Punjab,Mangowal,Wheat,Wheat,0,0,0,0,06/03/2025
+Punjab,Islamabad,Wheat,Wheat,0,0,0,0,06/03/2025
+Punjab,Khushab,Wheat,Wheat,0,0,0,0,06/03/2025
+Punjab,Layyah,Wheat,Wheat,0,0,0,0,06/03/2025
+Punjab,Mandi Bahauddin,Wheat,Wheat,0,0,0,0,06/03/2025
+Punjab,Mianwali,Wheat,Wheat,0,0,0,0,06/03/2025
+Punjab,Sargodha,Wheat,Wheat,0,0,0,0,06/03/2025
+Punjab,Taunsa sharif,Wheat,Wheat,0,0,0,0,06/03/2025
+Punjab,Lahore,Wheat,Wheat,0,0,0,0,06/03/2025
+Punjab,Ahmadpur East,Wheat,Wheat,0,0,0,40,06/03/2025
+Punjab,Bahawalnagar,Wheat,Wheat,0,0,0,40,06/03/2025
+Punjab,Chowk Azam,Wheat,Wheat,0,0,0,40,06/03/2025
+Punjab,Haroonabad,Wheat,Wheat,0,0,0,40,06/03/2025
+Punjab,Hasilpur,Wheat,Wheat,0,0,0,40,06/03/2025
+Punjab,Minchinabad,Wheat,Wheat,0,0,0,40,06/03/2025
+Punjab,Multan,Wheat,Wheat,0,0,0,40,06/03/2025
+Punjab,Muzaffargarh,Wheat,Wheat,0,0,0,40,06/03/2025
+Punjab,Nankana Sahib,Wheat,Wheat,0,0,0,40,06/03/2025
+Punjab,Faizabad,Wheat,Wheat,0,0,0,40,06/03/2025
+Punjab,Bucheki,Wheat,Wheat,0,0,0,50,06/03/2025
+Punjab,Pattoki,Wheat,Wheat,0,0,78,40,06/03/2025
+Punjab,Khushab,Wheat,Wheat,0,0,247,40,06/03/2025
+Punjab,Multan,Wheat,Wheat,0,0,300,40,06/03/2025
+Punjab,Dipalpur,Wheat,Wheat,0,0,317,55,06/03/2025
+Punjab,Mianwali,Wheat,Wheat,0,0,500,50,06/03/2025
+Punjab,Allahabad,Wheat,Wheat,0,0,650,50,06/03/2025
+Punjab,Quaidabad,Wheat,Wheat,0,0,680,40,06/03/2025
+Punjab,Bhakkar,Wheat,Wheat,0,0,800,50,06/03/2025
+Punjab,Gojra,Wheat,Wheat,0,0,1000,50,06/03/2025
+Punjab,Sargodha,Wheat,Wheat,0,0,1000,50,06/03/2025
+Punjab,Vehari,Wheat,Wheat,0,0,1000,50,06/03/2025
+Punjab,Hasilpur,Wheat,Wheat,0,0,1100,50,06/03/2025
+Punjab,Burewala,Wheat,Wheat,0,0,1500,40,06/03/2025
+Punjab,Jaranwala,Wheat,Wheat,0,0,1500,50,06/03/2025
+Punjab,Dunga Bunga,Wheat,Wheat,0,0,2000,40,06/03/2025
+Punjab,Chichawatni,Wheat,Wheat,0,0,2000,50,06/03/2025
+Punjab,Faisalabad,Wheat,Wheat,0,0,2000,50,06/03/2025
+Punjab,Mian Channu,Wheat,Wheat,0,0,2000,50,06/03/2025
+Punjab,Shorkot,Wheat,Wheat,0,0,2000,50,06/03/2025
+Punjab,Chishtian,Wheat,Wheat,0,0,2500,50,06/03/2025
+Punjab,Chowk Munda,Wheat,Wheat,0,0,2500,50,06/03/2025
+Punjab,Khanewal,Wheat,Wheat,0,0,2500,50,06/03/2025
+Punjab,Pasrur,Wheat,Wheat,0,0,3000,40,06/03/2025
+Punjab,Bahawalpur,Wheat,Wheat,0,0,3000,50,06/03/2025
+Punjab,Faqirwali,Wheat,Wheat,0,0,3000,50,06/03/2025
+Punjab,Kamoki,Wheat,Wheat,0,0,3000,50,06/03/2025
+Punjab,Sheikhupura,Wheat,Wheat,0,0,3000,50,06/03/2025
+Punjab,Sahiwal,Wheat,Wheat,0,0,3500,50,06/03/2025
+Punjab,Muridke,Wheat,Wheat,0,0,4000,40,06/03/2025
+Punjab,Sialkot,Wheat,Wheat,0,0,4000,40,06/03/2025
+Punjab,Arifwala,Wheat,Wheat,0,0,4000,60,06/03/2025
+Punjab,Rahim Yar Khan,Wheat,Wheat,0,0,4500,100,06/03/2025
+Punjab,Fortabbas,Wheat,Wheat,0,0,4500,50,06/03/2025
+Punjab,Haroonabad,Wheat,Wheat,0,0,5000,50,06/03/2025
+Punjab,Pakpattan,Wheat,Wheat,0,0,5000,50,06/03/2025
+Punjab,Shujabad,Wheat,Wheat,0,0,5500,50,06/03/2025
+Punjab,Sadiqabad,Wheat,Wheat,0,0,6000,100,06/03/2025
+Punjab,Lodhran,Wheat,Wheat,0,0,7500,50,06/03/2025
+Punjab,Hafizabad,Wheat,Wheat,0,0,13000,50,06/03/2025
+Punjab,Gujranwala,Wheat,Wheat,0,0,15000,50,06/03/2025
+Punjab,Dera Ghazi Khan,Wheat,Wheat,0,0,18000,100,06/03/2025
+Punjab,Gojra,Wheat,Wheat,0,0,100,50,06/03/2025
+Punjab,Sargodha,Wheat,Wheat,0,0,100,50,06/03/2025
+Punjab,Sialkot,Wheat,Wheat,0,0,300,40,06/03/2025
+Punjab,Muridke,Wheat,Wheat,0,0,400,40,06/03/2025
+Punjab,Pasrur,Wheat,Wheat,0,0,400,40,06/03/2025
+Balochistan,Dera Bughti,Wheat,Wheat,0,0,0,0,06/03/2025
+Balochistan,Jaffarabad,Wheat,Wheat,0,0,0,0,06/03/2025
+Balochistan,Musakhel,Wheat,Wheat,0,0,0,0,06/03/2025
+Balochistan,Sibi,Wheat,Wheat,0,0,0,0,06/03/2025
+Balochistan,Uthal,Wheat,Wheat,0,0,0,0,06/03/2025
+KPK,Landi Kotal,Wheat,Wheat,0,0,25,40,06/03/2025
+KPK,Landi Kotal,Wheat,Wheat,0,0,35,40,06/03/2025
+KPK,Peshawar,Wheat,Wheat,0,0,50,40,06/03/2025
+KPK,Dera Ismail Khan,Wheat,Wheat,0,0,15,40,06/03/2025
+Sindh,Karachi,Wheat,Flour,0,0,0,0,06/03/2025
+Sindh,Shaheed Benazirabad (Nawabshah),Wheat,Flour,0,0,0,0,06/03/2025
+Sindh,Pano Aqil,Wheat,Flour,0,0,0,0,06/03/2025
+Sindh,Naushahro Feroze,Wheat,Flour,0,0,0,0,06/03/2025
+Sindh,Mirpur Khas,Wheat,Flour,0,0,0,0,06/03/2025
+Sindh,Hyderabad,Wheat,Flour,0,0,0,0,06/03/2025
+Sindh,Moro,Wheat,Flour,0,0,0,0,06/03/2025
+Sindh,Sukkur,Wheat,Flour,0,0,0,0,06/03/2025
+Sindh,Khairpur,Wheat,Flour,0,0,0,0,06/03/2025
+Sindh,Dadu,Wheat,Flour,0,0,0,0,06/03/2025
+Punjab,Taxila,Wheat,Flour,0,0,0,0,06/03/2025
+Punjab,Islamabad,Wheat,Flour,0,0,0,0,06/03/2025
+Punjab,Mandi Bahauddin,Wheat,Flour,0,0,0,0,06/03/2025
+Punjab,Lahore,Wheat,Flour,0,0,0,0,06/03/2025
+Punjab,Rahim Yar Khan,Wheat,Flour,0,0,0,0,06/03/2025
+Punjab,Sheikhupura,Wheat,Flour,0,0,0,0,06/03/2025
+Punjab,Faisalabad,Wheat,Flour,0,0,0,0,06/03/2025
+Punjab,Jaranwala,Wheat,Flour,0,0,0,0,06/03/2025
+Punjab,Gujranwala,Wheat,Flour,0,0,0,0,06/03/2025
+KPK,Dera Ismail Khan,Wheat,Flour,0,0,0,0,06/03/2025
+KPK,Havelian,Wheat,Flour,0,0,0,0,06/03/2025
+Sindh,Sukkur,Wheat,Straw,0,0,0,0,06/03/2025
+Sindh,Hyderabad,Wheat,Straw,0,0,0,0,06/03/2025
+Sindh,Naushahro Feroze,Wheat,Straw,0,0,0,0,06/03/2025
+Punjab,Layyah,Wheat,Straw,0,0,0,0,06/03/2025
+Punjab,Bahawalpur,Wheat,Straw,0,0,0,0,06/03/2025
+Punjab,Faqirwali,Wheat,Straw,0,0,0,0,06/03/2025
+Sindh,Shaheed Benazirabad (Nawabshah),Wheat,White Flour,0,0,0,0,06/03/2025
+Sindh,Pano Aqil,Wheat,White Flour,0,0,0,0,06/03/2025
+Punjab,Faisalabad,Wheat,White Flour,0,0,0,0,06/03/2025
+Punjab,Rahim Yar Khan,Wheat,White Flour,0,0,0,0,06/03/2025
+Punjab,Gujranwala,Wheat,White Flour,0,0,0,0,06/03/2025
+Punjab,Lahore,Wheat,White Flour,0,0,0,0,06/03/2025
+Punjab,Mandi Bahauddin,Wheat,White Flour,0,0,0,0,06/03/2025
+Punjab,Multan,Wheat,White Flour,0,0,0,0,06/03/2025
+Punjab,Sheikhupura,Wheat,White Flour,0,0,0,0,06/03/2025
